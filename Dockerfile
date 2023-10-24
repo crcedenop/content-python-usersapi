@@ -12,10 +12,10 @@ ENV PYTHONUNBUFFERED 1
 RUN apt-get update \
   && apt-get -y install netcat gcc postgresql \
   && apt-get clean
-RUN pip3 install --upgrade pip
 
 # add/install requirements
 COPY ./requirements.txt .
+RUN pip3 install --upgrade pip
 RUN pip check
 RUN pip install -r requirements.txt 
 
