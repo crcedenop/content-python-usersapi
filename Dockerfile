@@ -17,7 +17,7 @@ RUN pip3 install --upgrade pip
 # add/install requirements
 COPY ./requirements.txt .
 RUN pip check
-RUN pip install -r requirements.txt --use-feature=2020-resolver
+RUN pip install -r requirements.txt 
 
 # copy files
 COPY . .
