@@ -15,7 +15,8 @@ RUN apt-get update \
 
 # add/install requirements
 COPY ./requirements.txt .
-RUN pip install -r requirements.txt --use-feature=2020-resolver
+RUN python -m pip install --upgrade pip 
+RUN pip install -r requirements.txt 
 
 # copy files
 COPY . .
